@@ -1,0 +1,13 @@
+train_net: "models/train.prototxt"
+base_lr: 0.001
+lr_policy: "step"
+gamma: 0.1
+stepsize: 20000
+display: 20
+average_loss: 100
+momentum: 0.9
+weight_decay: 0.0001
+snapshot: 0
+# We still use the snapshot prfix
+snapshot_prefix: "face"
+iter_size: 2
