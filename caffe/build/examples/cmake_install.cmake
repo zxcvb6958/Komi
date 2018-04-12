@@ -1,8 +1,8 @@
-# Install script for directory: /home/wangcheng/face/caffe/examples
+# Install script for directory: /home/wangcheng/work/Komi/caffe/examples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/wangcheng/face/caffe/build/install")
+  set(CMAKE_INSTALL_PREFIX "/home/wangcheng/work/Komi/caffe/build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,80 +32,80 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_cifar_data" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_cifar_data")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_cifar_data"
-         RPATH "/home/wangcheng/face/caffe/build/install/lib:/home/wangcheng/caffe/anaconda2/lib:/usr/local/cuda/lib64:/home/wangcheng/cuda/lib64")
+         RPATH "/home/wangcheng/work/Komi/caffe/build/install/lib:/home/wangcheng/anaconda2/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/wangcheng/face/caffe/build/examples/cifar10/convert_cifar_data")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/wangcheng/work/Komi/caffe/build/examples/cifar10/convert_cifar_data")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_cifar_data" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_cifar_data")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_cifar_data"
-         OLD_RPATH "/home/wangcheng/face/caffe/build/lib:/home/wangcheng/caffe/anaconda2/lib:/usr/local/cuda/lib64:/home/wangcheng/cuda/lib64::::::::"
-         NEW_RPATH "/home/wangcheng/face/caffe/build/install/lib:/home/wangcheng/caffe/anaconda2/lib:/usr/local/cuda/lib64:/home/wangcheng/cuda/lib64")
+         OLD_RPATH "/home/wangcheng/work/Komi/caffe/build/lib:/home/wangcheng/anaconda2/lib::::::::"
+         NEW_RPATH "/home/wangcheng/work/Komi/caffe/build/install/lib:/home/wangcheng/anaconda2/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_cifar_data")
     endif()
   endif()
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/classification" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/classification")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/classification"
-         RPATH "/home/wangcheng/face/caffe/build/install/lib:/home/wangcheng/caffe/anaconda2/lib:/usr/local/cuda/lib64:/home/wangcheng/cuda/lib64")
+         RPATH "/home/wangcheng/work/Komi/caffe/build/install/lib:/home/wangcheng/anaconda2/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/wangcheng/face/caffe/build/examples/cpp_classification/classification")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/wangcheng/work/Komi/caffe/build/examples/cpp_classification/classification")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/classification" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/classification")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/classification"
-         OLD_RPATH "/home/wangcheng/face/caffe/build/lib:/home/wangcheng/caffe/anaconda2/lib:/usr/local/cuda/lib64:/home/wangcheng/cuda/lib64::::::::"
-         NEW_RPATH "/home/wangcheng/face/caffe/build/install/lib:/home/wangcheng/caffe/anaconda2/lib:/usr/local/cuda/lib64:/home/wangcheng/cuda/lib64")
+         OLD_RPATH "/home/wangcheng/work/Komi/caffe/build/lib:/home/wangcheng/anaconda2/lib::::::::"
+         NEW_RPATH "/home/wangcheng/work/Komi/caffe/build/install/lib:/home/wangcheng/anaconda2/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/classification")
     endif()
   endif()
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_mnist_data" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_mnist_data")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_mnist_data"
-         RPATH "/home/wangcheng/face/caffe/build/install/lib:/home/wangcheng/caffe/anaconda2/lib:/usr/local/cuda/lib64:/home/wangcheng/cuda/lib64")
+         RPATH "/home/wangcheng/work/Komi/caffe/build/install/lib:/home/wangcheng/anaconda2/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/wangcheng/face/caffe/build/examples/mnist/convert_mnist_data")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/wangcheng/work/Komi/caffe/build/examples/mnist/convert_mnist_data")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_mnist_data" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_mnist_data")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_mnist_data"
-         OLD_RPATH "/home/wangcheng/face/caffe/build/lib:/home/wangcheng/caffe/anaconda2/lib:/usr/local/cuda/lib64:/home/wangcheng/cuda/lib64::::::::"
-         NEW_RPATH "/home/wangcheng/face/caffe/build/install/lib:/home/wangcheng/caffe/anaconda2/lib:/usr/local/cuda/lib64:/home/wangcheng/cuda/lib64")
+         OLD_RPATH "/home/wangcheng/work/Komi/caffe/build/lib:/home/wangcheng/anaconda2/lib::::::::"
+         NEW_RPATH "/home/wangcheng/work/Komi/caffe/build/install/lib:/home/wangcheng/anaconda2/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_mnist_data")
     endif()
   endif()
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_mnist_siamese_data" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_mnist_siamese_data")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_mnist_siamese_data"
-         RPATH "/home/wangcheng/face/caffe/build/install/lib:/home/wangcheng/caffe/anaconda2/lib:/usr/local/cuda/lib64:/home/wangcheng/cuda/lib64")
+         RPATH "/home/wangcheng/work/Komi/caffe/build/install/lib:/home/wangcheng/anaconda2/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/wangcheng/face/caffe/build/examples/siamese/convert_mnist_siamese_data")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/wangcheng/work/Komi/caffe/build/examples/siamese/convert_mnist_siamese_data")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_mnist_siamese_data" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_mnist_siamese_data")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_mnist_siamese_data"
-         OLD_RPATH "/home/wangcheng/face/caffe/build/lib:/home/wangcheng/caffe/anaconda2/lib:/usr/local/cuda/lib64:/home/wangcheng/cuda/lib64::::::::"
-         NEW_RPATH "/home/wangcheng/face/caffe/build/install/lib:/home/wangcheng/caffe/anaconda2/lib:/usr/local/cuda/lib64:/home/wangcheng/cuda/lib64")
+         OLD_RPATH "/home/wangcheng/work/Komi/caffe/build/lib:/home/wangcheng/anaconda2/lib::::::::"
+         NEW_RPATH "/home/wangcheng/work/Komi/caffe/build/install/lib:/home/wangcheng/anaconda2/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/convert_mnist_siamese_data")
     endif()

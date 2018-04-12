@@ -39,7 +39,7 @@ endif()
 
 # Compute paths
 get_filename_component(Caffe_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
-set(Caffe_INCLUDE_DIRS "/usr/include;/home/wangcheng/caffe/anaconda2/include;/usr/local/cuda/include;/home/wangcheng/cuda/include;/usr/include/opencv")
+set(Caffe_INCLUDE_DIRS "/usr/include;/home/wangcheng/anaconda2/include;/usr/include/opencv")
 
 get_filename_component(__caffe_include "${Caffe_CMAKE_DIR}/../../include" ABSOLUTE)
 list(APPEND Caffe_INCLUDE_DIRS ${__caffe_include})
@@ -55,9 +55,9 @@ endif()
 set(Caffe_LIBRARIES caffe)
 
 # Definitions
-set(Caffe_DEFINITIONS "-DUSE_OPENCV;-DUSE_LMDB;-DUSE_LEVELDB")
+set(Caffe_DEFINITIONS "-DCPU_ONLY;-DUSE_OPENCV;-DUSE_LMDB;-DUSE_LEVELDB")
 
 # Cuda support variables
-set(Caffe_CPU_ONLY OFF)
-set(Caffe_HAVE_CUDA TRUE)
-set(Caffe_HAVE_CUDNN TRUE)
+set(Caffe_CPU_ONLY ON)
+set(Caffe_HAVE_CUDA FALSE)
+set(Caffe_HAVE_CUDNN FALSE)

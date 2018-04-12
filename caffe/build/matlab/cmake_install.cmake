@@ -1,8 +1,8 @@
-# Install script for directory: /home/wangcheng/face/caffe/matlab
+# Install script for directory: /home/wangcheng/work/Komi/caffe/matlab
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/wangcheng/face/caffe/build/install")
+  set(CMAKE_INSTALL_PREFIX "/home/wangcheng/work/Komi/caffe/build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
