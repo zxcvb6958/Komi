@@ -12,7 +12,7 @@ git clone https://github.com/zxcvb6958/Komi.git
 
 3. Install caffe. 
 
-\t[click here](https://blog.csdn.net/u013832707/article/details/53159071).
+[click here](https://blog.csdn.net/u013832707/article/details/53159071).
 
 
 4. Run test.py
