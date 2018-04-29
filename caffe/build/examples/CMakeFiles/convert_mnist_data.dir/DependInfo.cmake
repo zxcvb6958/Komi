@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/wangcheng/work/Komi/caffe/examples/mnist/convert_mnist_data.cpp" "/home/wangcheng/work/Komi/caffe/build/examples/CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.o"
+  "/home/wangcheng/Komi/caffe/examples/mnist/convert_mnist_data.cpp" "/home/wangcheng/Komi/caffe/build/examples/CMakeFiles/convert_mnist_data.dir/mnist/convert_mnist_data.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -22,19 +22,19 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../src"
-  "/home/wangcheng/anaconda2/include"
   "include"
+  "/home/wangcheng/caffe/anaconda2/include"
   "/usr/include/opencv"
-  "/home/wangcheng/anaconda2/include/python2.7"
-  "/home/wangcheng/anaconda2/lib/python2.7/site-packages/numpy/core/include"
+  "/home/wangcheng/caffe/anaconda2/include/python2.7"
+  "/home/wangcheng/caffe/anaconda2/lib/python2.7/site-packages/numpy/core/include"
   "../include"
   "."
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/wangcheng/work/Komi/caffe/build/src/caffe/CMakeFiles/caffe.dir/DependInfo.cmake"
-  "/home/wangcheng/work/Komi/caffe/build/src/caffe/CMakeFiles/proto.dir/DependInfo.cmake"
+  "/home/wangcheng/Komi/caffe/build/src/caffe/CMakeFiles/caffe.dir/DependInfo.cmake"
+  "/home/wangcheng/Komi/caffe/build/src/caffe/CMakeFiles/proto.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

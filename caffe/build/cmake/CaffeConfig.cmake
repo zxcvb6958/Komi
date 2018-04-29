@@ -39,7 +39,7 @@ endif()
 
 # Compute paths
 get_filename_component(Caffe_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
-set(Caffe_INCLUDE_DIRS "/usr/include;/home/wangcheng/anaconda2/include;/usr/include/opencv")
+set(Caffe_INCLUDE_DIRS "/usr/include;/home/wangcheng/caffe/anaconda2/include;/usr/include/opencv")
 
 get_filename_component(__caffe_include "${Caffe_CMAKE_DIR}/../../include" ABSOLUTE)
 list(APPEND Caffe_INCLUDE_DIRS ${__caffe_include})

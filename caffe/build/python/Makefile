@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/wangcheng/anaconda2/bin/cmake
+CMAKE_COMMAND = /home/wangcheng/caffe/anaconda2/bin/cmake
 
 # The command to remove a file.
-RM = /home/wangcheng/anaconda2/bin/cmake -E remove -f
+RM = /home/wangcheng/caffe/anaconda2/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wangcheng/work/Komi/caffe
+CMAKE_SOURCE_DIR = /home/wangcheng/Komi/caffe
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wangcheng/work/Komi/caffe/build
+CMAKE_BINARY_DIR = /home/wangcheng/Komi/caffe/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,19 +59,31 @@ CMAKE_BINARY_DIR = /home/wangcheng/work/Komi/caffe/build
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/wangcheng/anaconda2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/wangcheng/caffe/anaconda2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/wangcheng/anaconda2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/wangcheng/caffe/anaconda2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/wangcheng/caffe/anaconda2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/wangcheng/caffe/anaconda2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/home/wangcheng/anaconda2/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/wangcheng/caffe/anaconda2/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -82,13 +94,25 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/wangcheng/anaconda2/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/wangcheng/caffe/anaconda2/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/wangcheng/caffe/anaconda2/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/wangcheng/caffe/anaconda2/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -100,40 +124,16 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/wangcheng/anaconda2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/wangcheng/anaconda2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/wangcheng/anaconda2/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/wangcheng/anaconda2/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # The main all target
 all: cmake_check_build_system
-	cd /home/wangcheng/work/Komi/caffe/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wangcheng/work/Komi/caffe/build/CMakeFiles /home/wangcheng/work/Komi/caffe/build/python/CMakeFiles/progress.marks
-	cd /home/wangcheng/work/Komi/caffe/build && $(MAKE) -f CMakeFiles/Makefile2 python/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangcheng/work/Komi/caffe/build/CMakeFiles 0
+	cd /home/wangcheng/Komi/caffe/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wangcheng/Komi/caffe/build/CMakeFiles /home/wangcheng/Komi/caffe/build/python/CMakeFiles/progress.marks
+	cd /home/wangcheng/Komi/caffe/build && $(MAKE) -f CMakeFiles/Makefile2 python/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangcheng/Komi/caffe/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/wangcheng/work/Komi/caffe/build && $(MAKE) -f CMakeFiles/Makefile2 python/clean
+	cd /home/wangcheng/Komi/caffe/build && $(MAKE) -f CMakeFiles/Makefile2 python/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/wangcheng/work/Komi/caffe/build && $(MAKE) -f CMakeFiles/Makefile2 python/preinstall
+	cd /home/wangcheng/Komi/caffe/build && $(MAKE) -f CMakeFiles/Makefile2 python/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/wangcheng/work/Komi/caffe/build && $(MAKE) -f CMakeFiles/Makefile2 python/preinstall
+	cd /home/wangcheng/Komi/caffe/build && $(MAKE) -f CMakeFiles/Makefile2 python/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/wangcheng/work/Komi/caffe/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/wangcheng/Komi/caffe/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 python/CMakeFiles/pycaffe.dir/rule:
-	cd /home/wangcheng/work/Komi/caffe/build && $(MAKE) -f CMakeFiles/Makefile2 python/CMakeFiles/pycaffe.dir/rule
+	cd /home/wangcheng/Komi/caffe/build && $(MAKE) -f CMakeFiles/Makefile2 python/CMakeFiles/pycaffe.dir/rule
 .PHONY : python/CMakeFiles/pycaffe.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ pycaffe: python/CMakeFiles/pycaffe.dir/rule
 
 # fast build rule for target.
 pycaffe/fast:
-	cd /home/wangcheng/work/Komi/caffe/build && $(MAKE) -f python/CMakeFiles/pycaffe.dir/build.make python/CMakeFiles/pycaffe.dir/build
+	cd /home/wangcheng/Komi/caffe/build && $(MAKE) -f python/CMakeFiles/pycaffe.dir/build.make python/CMakeFiles/pycaffe.dir/build
 .PHONY : pycaffe/fast
 
 caffe/_caffe.o: caffe/_caffe.cpp.o
@@ -177,7 +177,7 @@ caffe/_caffe.o: caffe/_caffe.cpp.o
 
 # target to build an object file
 caffe/_caffe.cpp.o:
-	cd /home/wangcheng/work/Komi/caffe/build && $(MAKE) -f python/CMakeFiles/pycaffe.dir/build.make python/CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.o
+	cd /home/wangcheng/Komi/caffe/build && $(MAKE) -f python/CMakeFiles/pycaffe.dir/build.make python/CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.o
 .PHONY : caffe/_caffe.cpp.o
 
 caffe/_caffe.i: caffe/_caffe.cpp.i
@@ -186,7 +186,7 @@ caffe/_caffe.i: caffe/_caffe.cpp.i
 
 # target to preprocess a source file
 caffe/_caffe.cpp.i:
-	cd /home/wangcheng/work/Komi/caffe/build && $(MAKE) -f python/CMakeFiles/pycaffe.dir/build.make python/CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.i
+	cd /home/wangcheng/Komi/caffe/build && $(MAKE) -f python/CMakeFiles/pycaffe.dir/build.make python/CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.i
 .PHONY : caffe/_caffe.cpp.i
 
 caffe/_caffe.s: caffe/_caffe.cpp.s
@@ -195,7 +195,7 @@ caffe/_caffe.s: caffe/_caffe.cpp.s
 
 # target to generate assembly for a file
 caffe/_caffe.cpp.s:
-	cd /home/wangcheng/work/Komi/caffe/build && $(MAKE) -f python/CMakeFiles/pycaffe.dir/build.make python/CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.s
+	cd /home/wangcheng/Komi/caffe/build && $(MAKE) -f python/CMakeFiles/pycaffe.dir/build.make python/CMakeFiles/pycaffe.dir/caffe/_caffe.cpp.s
 .PHONY : caffe/_caffe.cpp.s
 
 # Help Target
@@ -205,12 +205,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... edit_cache"
-	@echo "... pycaffe"
-	@echo "... rebuild_cache"
-	@echo "... list_install_components"
 	@echo "... install/local"
+	@echo "... pycaffe"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
 	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... caffe/_caffe.o"
 	@echo "... caffe/_caffe.i"
 	@echo "... caffe/_caffe.s"
@@ -225,6 +225,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/wangcheng/work/Komi/caffe/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/wangcheng/Komi/caffe/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

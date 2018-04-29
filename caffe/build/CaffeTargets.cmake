@@ -50,8 +50,8 @@ add_library(proto STATIC IMPORTED)
 # Import target "caffe" for configuration "Release"
 set_property(TARGET caffe APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(caffe PROPERTIES
-  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "proto;proto;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libboost_thread.so;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;-lpthread;/home/wangcheng/anaconda2/lib/libglog.so;/home/wangcheng/anaconda2/lib/libgflags.so;/usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread;/home/wangcheng/anaconda2/lib/libhdf5_cpp.so;/home/wangcheng/anaconda2/lib/libhdf5.so;/usr/lib/x86_64-linux-gnu/librt.so;/usr/lib/x86_64-linux-gnu/libpthread.so;/home/wangcheng/anaconda2/lib/libz.so;/usr/lib/x86_64-linux-gnu/libdl.so;/usr/lib/x86_64-linux-gnu/libm.so;/home/wangcheng/anaconda2/lib/libhdf5_hl_cpp.so;/home/wangcheng/anaconda2/lib/libhdf5_hl.so;/usr/lib/x86_64-linux-gnu/liblmdb.so;/usr/lib/x86_64-linux-gnu/libleveldb.so;/usr/lib/x86_64-linux-gnu/libsnappy.so;opencv_core;opencv_highgui;opencv_imgproc;/usr/lib/libopenblas.so;/home/wangcheng/anaconda2/lib/libpython2.7.so;/usr/lib/x86_64-linux-gnu/libboost_python.so"
-  IMPORTED_LOCATION_RELEASE "/home/wangcheng/work/Komi/caffe/build/lib/libcaffe.so.1.0.0-rc3"
+  IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "proto;proto;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libboost_thread.so;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;-lpthread;/usr/lib/x86_64-linux-gnu/libglog.so;/usr/lib/x86_64-linux-gnu/libgflags.so;/usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread;/home/wangcheng/caffe/anaconda2/lib/libhdf5_cpp.so;/home/wangcheng/caffe/anaconda2/lib/libhdf5.so;/usr/lib/x86_64-linux-gnu/librt.so;/usr/lib/x86_64-linux-gnu/libpthread.so;/home/wangcheng/caffe/anaconda2/lib/libz.so;/usr/lib/x86_64-linux-gnu/libdl.so;/usr/lib/x86_64-linux-gnu/libm.so;/home/wangcheng/caffe/anaconda2/lib/libhdf5_hl_cpp.so;/home/wangcheng/caffe/anaconda2/lib/libhdf5_hl.so;/usr/lib/x86_64-linux-gnu/liblmdb.so;/usr/lib/x86_64-linux-gnu/libleveldb.so;/usr/lib/x86_64-linux-gnu/libsnappy.so;opencv_core;opencv_highgui;opencv_imgproc;/usr/lib/libopenblas.so;/home/wangcheng/caffe/anaconda2/lib/libpython2.7.so;/usr/lib/x86_64-linux-gnu/libboost_python.so"
+  IMPORTED_LOCATION_RELEASE "/home/wangcheng/Komi/caffe/build/lib/libcaffe.so.1.0.0-rc3"
   IMPORTED_SONAME_RELEASE "libcaffe.so.1.0.0-rc3"
   )
 
@@ -59,7 +59,7 @@ set_target_properties(caffe PROPERTIES
 set_property(TARGET proto APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(proto PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "/home/wangcheng/work/Komi/caffe/build/lib/libproto.a"
+  IMPORTED_LOCATION_RELEASE "/home/wangcheng/Komi/caffe/build/lib/libproto.a"
   )
 
 # This file does not depend on other imported targets which have

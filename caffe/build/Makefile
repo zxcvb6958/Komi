@@ -39,45 +39,33 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/wangcheng/anaconda2/bin/cmake
+CMAKE_COMMAND = /home/wangcheng/caffe/anaconda2/bin/cmake
 
 # The command to remove a file.
-RM = /home/wangcheng/anaconda2/bin/cmake -E remove -f
+RM = /home/wangcheng/caffe/anaconda2/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wangcheng/work/Komi/caffe
+CMAKE_SOURCE_DIR = /home/wangcheng/Komi/caffe
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wangcheng/work/Komi/caffe/build
+CMAKE_BINARY_DIR = /home/wangcheng/Komi/caffe/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/wangcheng/anaconda2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/wangcheng/anaconda2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/wangcheng/anaconda2/bin/cmake -P cmake_install.cmake
+	/home/wangcheng/caffe/anaconda2/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/wangcheng/anaconda2/bin/cmake -P cmake_install.cmake
+	/home/wangcheng/caffe/anaconda2/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target list_install_components
@@ -90,33 +78,10 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/wangcheng/anaconda2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/wangcheng/anaconda2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/home/wangcheng/anaconda2/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/wangcheng/anaconda2/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/wangcheng/caffe/anaconda2/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -124,11 +89,46 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/wangcheng/caffe/anaconda2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/wangcheng/caffe/anaconda2/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/wangcheng/caffe/anaconda2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/wangcheng/caffe/anaconda2/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/home/wangcheng/caffe/anaconda2/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangcheng/work/Komi/caffe/build/CMakeFiles /home/wangcheng/work/Komi/caffe/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangcheng/Komi/caffe/build/CMakeFiles /home/wangcheng/Komi/caffe/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangcheng/work/Komi/caffe/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wangcheng/Komi/caffe/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -157,19 +157,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lint
-
-# Build rule for target.
-lint: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 lint
-.PHONY : lint
-
-# fast build rule for target.
-lint/fast:
-	$(MAKE) -f CMakeFiles/lint.dir/build.make CMakeFiles/lint.dir/build
-.PHONY : lint/fast
-
-#=============================================================================
 # Target rules for targets named symlink_to_build
 
 # Build rule for target.
@@ -181,6 +168,19 @@ symlink_to_build: cmake_check_build_system
 symlink_to_build/fast:
 	$(MAKE) -f CMakeFiles/symlink_to_build.dir/build.make CMakeFiles/symlink_to_build.dir/build
 .PHONY : symlink_to_build/fast
+
+#=============================================================================
+# Target rules for targets named lint
+
+# Build rule for target.
+lint: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lint
+.PHONY : lint
+
+# fast build rule for target.
+lint/fast:
+	$(MAKE) -f CMakeFiles/lint.dir/build.make CMakeFiles/lint.dir/build
+.PHONY : lint/fast
 
 #=============================================================================
 # Target rules for targets named pytest
@@ -209,19 +209,6 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
-# Target rules for targets named caffe
-
-# Build rule for target.
-caffe: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 caffe
-.PHONY : caffe
-
-# fast build rule for target.
-caffe/fast:
-	$(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/build
-.PHONY : caffe/fast
-
-#=============================================================================
 # Target rules for targets named proto
 
 # Build rule for target.
@@ -235,17 +222,17 @@ proto/fast:
 .PHONY : proto/fast
 
 #=============================================================================
-# Target rules for targets named runtest
+# Target rules for targets named caffe
 
 # Build rule for target.
-runtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 runtest
-.PHONY : runtest
+caffe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 caffe
+.PHONY : caffe
 
 # fast build rule for target.
-runtest/fast:
-	$(MAKE) -f src/caffe/test/CMakeFiles/runtest.dir/build.make src/caffe/test/CMakeFiles/runtest.dir/build
-.PHONY : runtest/fast
+caffe/fast:
+	$(MAKE) -f src/caffe/CMakeFiles/caffe.dir/build.make src/caffe/CMakeFiles/caffe.dir/build
+.PHONY : caffe/fast
 
 #=============================================================================
 # Target rules for targets named test.testbin
@@ -261,17 +248,30 @@ test.testbin/fast:
 .PHONY : test.testbin/fast
 
 #=============================================================================
-# Target rules for targets named extract_features
+# Target rules for targets named runtest
 
 # Build rule for target.
-extract_features: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 extract_features
-.PHONY : extract_features
+runtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runtest
+.PHONY : runtest
 
 # fast build rule for target.
-extract_features/fast:
-	$(MAKE) -f tools/CMakeFiles/extract_features.dir/build.make tools/CMakeFiles/extract_features.dir/build
-.PHONY : extract_features/fast
+runtest/fast:
+	$(MAKE) -f src/caffe/test/CMakeFiles/runtest.dir/build.make src/caffe/test/CMakeFiles/runtest.dir/build
+.PHONY : runtest/fast
+
+#=============================================================================
+# Target rules for targets named upgrade_solver_proto_text
+
+# Build rule for target.
+upgrade_solver_proto_text: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 upgrade_solver_proto_text
+.PHONY : upgrade_solver_proto_text
+
+# fast build rule for target.
+upgrade_solver_proto_text/fast:
+	$(MAKE) -f tools/CMakeFiles/upgrade_solver_proto_text.dir/build.make tools/CMakeFiles/upgrade_solver_proto_text.dir/build
+.PHONY : upgrade_solver_proto_text/fast
 
 #=============================================================================
 # Target rules for targets named device_query
@@ -287,17 +287,17 @@ device_query/fast:
 .PHONY : device_query/fast
 
 #=============================================================================
-# Target rules for targets named convert_imageset
+# Target rules for targets named caffe.bin
 
 # Build rule for target.
-convert_imageset: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 convert_imageset
-.PHONY : convert_imageset
+caffe.bin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 caffe.bin
+.PHONY : caffe.bin
 
 # fast build rule for target.
-convert_imageset/fast:
-	$(MAKE) -f tools/CMakeFiles/convert_imageset.dir/build.make tools/CMakeFiles/convert_imageset.dir/build
-.PHONY : convert_imageset/fast
+caffe.bin/fast:
+	$(MAKE) -f tools/CMakeFiles/caffe.bin.dir/build.make tools/CMakeFiles/caffe.bin.dir/build
+.PHONY : caffe.bin/fast
 
 #=============================================================================
 # Target rules for targets named test_net
@@ -313,17 +313,17 @@ test_net/fast:
 .PHONY : test_net/fast
 
 #=============================================================================
-# Target rules for targets named net_speed_benchmark
+# Target rules for targets named train_net
 
 # Build rule for target.
-net_speed_benchmark: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 net_speed_benchmark
-.PHONY : net_speed_benchmark
+train_net: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 train_net
+.PHONY : train_net
 
 # fast build rule for target.
-net_speed_benchmark/fast:
-	$(MAKE) -f tools/CMakeFiles/net_speed_benchmark.dir/build.make tools/CMakeFiles/net_speed_benchmark.dir/build
-.PHONY : net_speed_benchmark/fast
+train_net/fast:
+	$(MAKE) -f tools/CMakeFiles/train_net.dir/build.make tools/CMakeFiles/train_net.dir/build
+.PHONY : train_net/fast
 
 #=============================================================================
 # Target rules for targets named compute_image_mean
@@ -339,30 +339,17 @@ compute_image_mean/fast:
 .PHONY : compute_image_mean/fast
 
 #=============================================================================
-# Target rules for targets named train_net
+# Target rules for targets named convert_imageset
 
 # Build rule for target.
-train_net: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 train_net
-.PHONY : train_net
+convert_imageset: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 convert_imageset
+.PHONY : convert_imageset
 
 # fast build rule for target.
-train_net/fast:
-	$(MAKE) -f tools/CMakeFiles/train_net.dir/build.make tools/CMakeFiles/train_net.dir/build
-.PHONY : train_net/fast
-
-#=============================================================================
-# Target rules for targets named finetune_net
-
-# Build rule for target.
-finetune_net: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 finetune_net
-.PHONY : finetune_net
-
-# fast build rule for target.
-finetune_net/fast:
-	$(MAKE) -f tools/CMakeFiles/finetune_net.dir/build.make tools/CMakeFiles/finetune_net.dir/build
-.PHONY : finetune_net/fast
+convert_imageset/fast:
+	$(MAKE) -f tools/CMakeFiles/convert_imageset.dir/build.make tools/CMakeFiles/convert_imageset.dir/build
+.PHONY : convert_imageset/fast
 
 #=============================================================================
 # Target rules for targets named upgrade_net_proto_binary
@@ -391,43 +378,56 @@ upgrade_net_proto_text/fast:
 .PHONY : upgrade_net_proto_text/fast
 
 #=============================================================================
-# Target rules for targets named upgrade_solver_proto_text
+# Target rules for targets named extract_features
 
 # Build rule for target.
-upgrade_solver_proto_text: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 upgrade_solver_proto_text
-.PHONY : upgrade_solver_proto_text
+extract_features: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 extract_features
+.PHONY : extract_features
 
 # fast build rule for target.
-upgrade_solver_proto_text/fast:
-	$(MAKE) -f tools/CMakeFiles/upgrade_solver_proto_text.dir/build.make tools/CMakeFiles/upgrade_solver_proto_text.dir/build
-.PHONY : upgrade_solver_proto_text/fast
+extract_features/fast:
+	$(MAKE) -f tools/CMakeFiles/extract_features.dir/build.make tools/CMakeFiles/extract_features.dir/build
+.PHONY : extract_features/fast
 
 #=============================================================================
-# Target rules for targets named caffe.bin
+# Target rules for targets named finetune_net
 
 # Build rule for target.
-caffe.bin: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 caffe.bin
-.PHONY : caffe.bin
+finetune_net: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 finetune_net
+.PHONY : finetune_net
 
 # fast build rule for target.
-caffe.bin/fast:
-	$(MAKE) -f tools/CMakeFiles/caffe.bin.dir/build.make tools/CMakeFiles/caffe.bin.dir/build
-.PHONY : caffe.bin/fast
+finetune_net/fast:
+	$(MAKE) -f tools/CMakeFiles/finetune_net.dir/build.make tools/CMakeFiles/finetune_net.dir/build
+.PHONY : finetune_net/fast
 
 #=============================================================================
-# Target rules for targets named classification
+# Target rules for targets named net_speed_benchmark
 
 # Build rule for target.
-classification: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 classification
-.PHONY : classification
+net_speed_benchmark: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 net_speed_benchmark
+.PHONY : net_speed_benchmark
 
 # fast build rule for target.
-classification/fast:
-	$(MAKE) -f examples/CMakeFiles/classification.dir/build.make examples/CMakeFiles/classification.dir/build
-.PHONY : classification/fast
+net_speed_benchmark/fast:
+	$(MAKE) -f tools/CMakeFiles/net_speed_benchmark.dir/build.make tools/CMakeFiles/net_speed_benchmark.dir/build
+.PHONY : net_speed_benchmark/fast
+
+#=============================================================================
+# Target rules for targets named convert_cifar_data
+
+# Build rule for target.
+convert_cifar_data: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 convert_cifar_data
+.PHONY : convert_cifar_data
+
+# fast build rule for target.
+convert_cifar_data/fast:
+	$(MAKE) -f examples/CMakeFiles/convert_cifar_data.dir/build.make examples/CMakeFiles/convert_cifar_data.dir/build
+.PHONY : convert_cifar_data/fast
 
 #=============================================================================
 # Target rules for targets named convert_mnist_data
@@ -443,17 +443,17 @@ convert_mnist_data/fast:
 .PHONY : convert_mnist_data/fast
 
 #=============================================================================
-# Target rules for targets named convert_cifar_data
+# Target rules for targets named classification
 
 # Build rule for target.
-convert_cifar_data: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 convert_cifar_data
-.PHONY : convert_cifar_data
+classification: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 classification
+.PHONY : classification
 
 # fast build rule for target.
-convert_cifar_data/fast:
-	$(MAKE) -f examples/CMakeFiles/convert_cifar_data.dir/build.make examples/CMakeFiles/convert_cifar_data.dir/build
-.PHONY : convert_cifar_data/fast
+classification/fast:
+	$(MAKE) -f examples/CMakeFiles/classification.dir/build.make examples/CMakeFiles/classification.dir/build
+.PHONY : classification/fast
 
 #=============================================================================
 # Target rules for targets named convert_mnist_siamese_data
@@ -487,35 +487,35 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
 	@echo "... install"
-	@echo "... lint"
 	@echo "... list_install_components"
+	@echo "... rebuild_cache"
 	@echo "... symlink_to_build"
+	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... lint"
 	@echo "... pytest"
 	@echo "... edit_cache"
-	@echo "... rebuild_cache"
 	@echo "... gtest"
-	@echo "... caffe"
 	@echo "... proto"
-	@echo "... runtest"
+	@echo "... caffe"
 	@echo "... test.testbin"
-	@echo "... extract_features"
+	@echo "... runtest"
+	@echo "... upgrade_solver_proto_text"
 	@echo "... device_query"
-	@echo "... convert_imageset"
+	@echo "... caffe.bin"
 	@echo "... test_net"
-	@echo "... net_speed_benchmark"
-	@echo "... compute_image_mean"
 	@echo "... train_net"
-	@echo "... finetune_net"
+	@echo "... compute_image_mean"
+	@echo "... convert_imageset"
 	@echo "... upgrade_net_proto_binary"
 	@echo "... upgrade_net_proto_text"
-	@echo "... upgrade_solver_proto_text"
-	@echo "... caffe.bin"
-	@echo "... classification"
-	@echo "... convert_mnist_data"
+	@echo "... extract_features"
+	@echo "... finetune_net"
+	@echo "... net_speed_benchmark"
 	@echo "... convert_cifar_data"
+	@echo "... convert_mnist_data"
+	@echo "... classification"
 	@echo "... convert_mnist_siamese_data"
 	@echo "... pycaffe"
 .PHONY : help

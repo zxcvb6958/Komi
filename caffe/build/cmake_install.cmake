@@ -1,8 +1,8 @@
-# Install script for directory: /home/wangcheng/work/Komi/caffe
+# Install script for directory: /home/wangcheng/Komi/caffe
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/wangcheng/work/Komi/caffe/build/install")
+  set(CMAKE_INSTALL_PREFIX "/home/wangcheng/Komi/caffe/build/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,14 +33,14 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Caffe" TYPE FILE FILES "/home/wangcheng/work/Komi/caffe/build/cmake/CaffeConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Caffe" TYPE FILE FILES "/home/wangcheng/Komi/caffe/build/cmake/CaffeConfig.cmake")
 endif()
 
 if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/Caffe/CaffeTargets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/Caffe/CaffeTargets.cmake"
-         "/home/wangcheng/work/Komi/caffe/build/CMakeFiles/Export/share/Caffe/CaffeTargets.cmake")
+         "/home/wangcheng/Komi/caffe/build/CMakeFiles/Export/share/Caffe/CaffeTargets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/Caffe/CaffeTargets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -49,21 +49,21 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMP
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Caffe" TYPE FILE FILES "/home/wangcheng/work/Komi/caffe/build/CMakeFiles/Export/share/Caffe/CaffeTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Caffe" TYPE FILE FILES "/home/wangcheng/Komi/caffe/build/CMakeFiles/Export/share/Caffe/CaffeTargets.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Caffe" TYPE FILE FILES "/home/wangcheng/work/Komi/caffe/build/CMakeFiles/Export/share/Caffe/CaffeTargets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Caffe" TYPE FILE FILES "/home/wangcheng/Komi/caffe/build/CMakeFiles/Export/share/Caffe/CaffeTargets-release.cmake")
   endif()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/wangcheng/work/Komi/caffe/build/src/gtest/cmake_install.cmake")
-  include("/home/wangcheng/work/Komi/caffe/build/src/caffe/cmake_install.cmake")
-  include("/home/wangcheng/work/Komi/caffe/build/tools/cmake_install.cmake")
-  include("/home/wangcheng/work/Komi/caffe/build/examples/cmake_install.cmake")
-  include("/home/wangcheng/work/Komi/caffe/build/python/cmake_install.cmake")
-  include("/home/wangcheng/work/Komi/caffe/build/matlab/cmake_install.cmake")
-  include("/home/wangcheng/work/Komi/caffe/build/docs/cmake_install.cmake")
+  include("/home/wangcheng/Komi/caffe/build/src/gtest/cmake_install.cmake")
+  include("/home/wangcheng/Komi/caffe/build/src/caffe/cmake_install.cmake")
+  include("/home/wangcheng/Komi/caffe/build/tools/cmake_install.cmake")
+  include("/home/wangcheng/Komi/caffe/build/examples/cmake_install.cmake")
+  include("/home/wangcheng/Komi/caffe/build/python/cmake_install.cmake")
+  include("/home/wangcheng/Komi/caffe/build/matlab/cmake_install.cmake")
+  include("/home/wangcheng/Komi/caffe/build/docs/cmake_install.cmake")
 
 endif()
 
@@ -75,5 +75,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/wangcheng/work/Komi/caffe/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/wangcheng/Komi/caffe/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

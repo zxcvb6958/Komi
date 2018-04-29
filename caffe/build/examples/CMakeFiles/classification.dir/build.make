@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/wangcheng/anaconda2/bin/cmake
+CMAKE_COMMAND = /home/wangcheng/caffe/anaconda2/bin/cmake
 
 # The command to remove a file.
-RM = /home/wangcheng/anaconda2/bin/cmake -E remove -f
+RM = /home/wangcheng/caffe/anaconda2/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wangcheng/work/Komi/caffe
+CMAKE_SOURCE_DIR = /home/wangcheng/Komi/caffe
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wangcheng/work/Komi/caffe/build
+CMAKE_BINARY_DIR = /home/wangcheng/Komi/caffe/build
 
 # Include any dependencies generated for this target.
 include examples/CMakeFiles/classification.dir/depend.make
@@ -59,16 +59,16 @@ include examples/CMakeFiles/classification.dir/flags.make
 
 examples/CMakeFiles/classification.dir/cpp_classification/classification.cpp.o: examples/CMakeFiles/classification.dir/flags.make
 examples/CMakeFiles/classification.dir/cpp_classification/classification.cpp.o: ../examples/cpp_classification/classification.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wangcheng/work/Komi/caffe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/classification.dir/cpp_classification/classification.cpp.o"
-	cd /home/wangcheng/work/Komi/caffe/build/examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/classification.dir/cpp_classification/classification.cpp.o -c /home/wangcheng/work/Komi/caffe/examples/cpp_classification/classification.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wangcheng/Komi/caffe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/CMakeFiles/classification.dir/cpp_classification/classification.cpp.o"
+	cd /home/wangcheng/Komi/caffe/build/examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/classification.dir/cpp_classification/classification.cpp.o -c /home/wangcheng/Komi/caffe/examples/cpp_classification/classification.cpp
 
 examples/CMakeFiles/classification.dir/cpp_classification/classification.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/classification.dir/cpp_classification/classification.cpp.i"
-	cd /home/wangcheng/work/Komi/caffe/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wangcheng/work/Komi/caffe/examples/cpp_classification/classification.cpp > CMakeFiles/classification.dir/cpp_classification/classification.cpp.i
+	cd /home/wangcheng/Komi/caffe/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wangcheng/Komi/caffe/examples/cpp_classification/classification.cpp > CMakeFiles/classification.dir/cpp_classification/classification.cpp.i
 
 examples/CMakeFiles/classification.dir/cpp_classification/classification.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/classification.dir/cpp_classification/classification.cpp.s"
-	cd /home/wangcheng/work/Komi/caffe/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wangcheng/work/Komi/caffe/examples/cpp_classification/classification.cpp -o CMakeFiles/classification.dir/cpp_classification/classification.cpp.s
+	cd /home/wangcheng/Komi/caffe/build/examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wangcheng/Komi/caffe/examples/cpp_classification/classification.cpp -o CMakeFiles/classification.dir/cpp_classification/classification.cpp.s
 
 examples/CMakeFiles/classification.dir/cpp_classification/classification.cpp.o.requires:
 
@@ -98,21 +98,21 @@ examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libboost_f
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-examples/cpp_classification/classification: /home/wangcheng/anaconda2/lib/libglog.so
-examples/cpp_classification/classification: /home/wangcheng/anaconda2/lib/libgflags.so
+examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libglog.so
+examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libgflags.so
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libprotobuf.so
-examples/cpp_classification/classification: /home/wangcheng/anaconda2/lib/libglog.so
-examples/cpp_classification/classification: /home/wangcheng/anaconda2/lib/libgflags.so
+examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libglog.so
+examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libgflags.so
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libprotobuf.so
-examples/cpp_classification/classification: /home/wangcheng/anaconda2/lib/libhdf5_cpp.so
-examples/cpp_classification/classification: /home/wangcheng/anaconda2/lib/libhdf5.so
+examples/cpp_classification/classification: /home/wangcheng/caffe/anaconda2/lib/libhdf5_cpp.so
+examples/cpp_classification/classification: /home/wangcheng/caffe/anaconda2/lib/libhdf5.so
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/librt.so
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libpthread.so
-examples/cpp_classification/classification: /home/wangcheng/anaconda2/lib/libz.so
+examples/cpp_classification/classification: /home/wangcheng/caffe/anaconda2/lib/libz.so
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libdl.so
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libm.so
-examples/cpp_classification/classification: /home/wangcheng/anaconda2/lib/libhdf5_hl_cpp.so
-examples/cpp_classification/classification: /home/wangcheng/anaconda2/lib/libhdf5_hl.so
+examples/cpp_classification/classification: /home/wangcheng/caffe/anaconda2/lib/libhdf5_hl_cpp.so
+examples/cpp_classification/classification: /home/wangcheng/caffe/anaconda2/lib/libhdf5_hl.so
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/liblmdb.so
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libleveldb.so
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libsnappy.so
@@ -120,12 +120,12 @@ examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libopencv_
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.9
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.9
 examples/cpp_classification/classification: /usr/lib/libopenblas.so
-examples/cpp_classification/classification: /home/wangcheng/anaconda2/lib/libpython2.7.so
+examples/cpp_classification/classification: /home/wangcheng/caffe/anaconda2/lib/libpython2.7.so
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libboost_python.so
 examples/cpp_classification/classification: examples/CMakeFiles/classification.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wangcheng/work/Komi/caffe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable cpp_classification/classification"
-	cd /home/wangcheng/work/Komi/caffe/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/classification.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/wangcheng/work/Komi/caffe/build/examples && ln -sf /home/wangcheng/work/Komi/caffe/build/examples/cpp_classification/classification /home/wangcheng/work/Komi/caffe/build/examples/cpp_classification/classification.bin
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wangcheng/Komi/caffe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable cpp_classification/classification"
+	cd /home/wangcheng/Komi/caffe/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/classification.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/wangcheng/Komi/caffe/build/examples && ln -sf /home/wangcheng/Komi/caffe/build/examples/cpp_classification/classification /home/wangcheng/Komi/caffe/build/examples/cpp_classification/classification.bin
 
 # Rule to build all files generated by this target.
 examples/CMakeFiles/classification.dir/build: examples/cpp_classification/classification
@@ -137,10 +137,10 @@ examples/CMakeFiles/classification.dir/requires: examples/CMakeFiles/classificat
 .PHONY : examples/CMakeFiles/classification.dir/requires
 
 examples/CMakeFiles/classification.dir/clean:
-	cd /home/wangcheng/work/Komi/caffe/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/classification.dir/cmake_clean.cmake
+	cd /home/wangcheng/Komi/caffe/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/classification.dir/cmake_clean.cmake
 .PHONY : examples/CMakeFiles/classification.dir/clean
 
 examples/CMakeFiles/classification.dir/depend:
-	cd /home/wangcheng/work/Komi/caffe/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wangcheng/work/Komi/caffe /home/wangcheng/work/Komi/caffe/examples /home/wangcheng/work/Komi/caffe/build /home/wangcheng/work/Komi/caffe/build/examples /home/wangcheng/work/Komi/caffe/build/examples/CMakeFiles/classification.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/wangcheng/Komi/caffe/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wangcheng/Komi/caffe /home/wangcheng/Komi/caffe/examples /home/wangcheng/Komi/caffe/build /home/wangcheng/Komi/caffe/build/examples /home/wangcheng/Komi/caffe/build/examples/CMakeFiles/classification.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/CMakeFiles/classification.dir/depend
 
