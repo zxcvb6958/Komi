@@ -30,7 +30,12 @@ def initilize():
     print 'initilizing...'
     deployPrototxt = "models/VGG_FACE_deploy.prototxt"
     modelFile = "data/pretrained_model/VGG_FACE.caffemodel"
+<<<<<<< HEAD
+    caffe.set_mode_gpu()
+    caffe.set_device(0)
+=======
     caffe.set_mode_cpu()
+>>>>>>> baf5f39b3126fd0d5490df5eeb7f74693cae452d
     net = caffe.Net(deployPrototxt, modelFile, caffe.TEST)
 
     return net
@@ -131,35 +136,6 @@ def calculate_accuracy(distance, labels, num):
 if __name__=='__main__':
     net = initilize()
 
-    output_dir = osp.join('outputs', 'cache')
-
-    # use_pkl = True
-
-    # if use_pkl:
-    #     def _load(fname):
-    #         assert osp.isfile(fname), "Must have extracted detections and features first before evaluation"
-    #         return unpickle(fname)
-
-    #     print "load pkl file, may take lot of time!"
-    #     timer = Timer()
-    #     timer.tic()
-    #     leftdata = _load('leftdata.pkl')
-    #     rightdata = _load('rightdata.pkl')
-    #     labels = _load('labels.pkl')
-    #     timer.toc()
-
-    #     print "load pkl file, use {:.3f} s"%timer.average_time
-    # else:
-    #     leftdata, rightdata, labels = read_imagelist('data/test/label.txt')
-
-    #     print "save pkl file, may take lot of time!"
-
-    #     pickle(leftdata, 'leftdata.pkl')
-    #     pickle(rightdata, 'rightdata.pkl')
-    #     pickle(labels, 'labels.pkl')
-
-    #     print "save done!"
-
     leftdata, rightdata, labels = read_imagelist('data/test/label.txt')
     featureleft, featureright = extractFeature(leftdata, rightdata)
 
@@ -168,16 +144,10 @@ if __name__=='__main__':
     distance = np.empty((test_num,))
     for i in range(test_num):
         distance[i] = mt[i][i]
-
-    # print 'Distance before normalization:\n', distance
-    # print 'Distance max:', np.max(distance), ' Distance min:', np.min(distance), '\n'
     distance_norm = np.empty((test_num,))
 
     for i in range(test_num):
         distance_norm[i] = (distance[i]-np.min(distance))/(np.max(distance)-np.min(distance))
-    
-    # print 'Distance after normalization:\n', distance_norm
-    # print 'Distance_norm max:', np.max(distance_norm), ' Distance_norm min:', np.min(distance_norm), '\n'
 
     highestAccuracy, threshold = calculate_accuracy(distance_norm,labels,len(labels))
     print ("the highest accuracy is : %.4f, and the corresponding threshold is %s \n"%(highestAccuracy, threshold))

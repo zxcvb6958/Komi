@@ -417,10 +417,17 @@ Protobuf_INCLUDE_DIR:PATH=/usr/include
 Protobuf_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotobuf.so
 
 //Path to a library.
+<<<<<<< HEAD
+PROTOBUF_PROTOC_LIBRARY:FILEPATH=/home/wangcheng/caffe/anaconda2/lib/libprotoc.so
+
+//Path to a library.
+PROTOBUF_PROTOC_LIBRARY_DEBUG:FILEPATH=/home/wangcheng/caffe/anaconda2/lib/libprotoc.so
+=======
 Protobuf_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotobuf.so
 
 //Path to a library.
 Protobuf_LITE_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotobuf-lite.so
+>>>>>>> baf5f39b3126fd0d5490df5eeb7f74693cae452d
 
 //Path to a library.
 Protobuf_LITE_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotobuf-lite.so
@@ -462,7 +469,11 @@ gtest_LIB_DEPENDS:STATIC=
 proto_LIB_DEPENDS:STATIC=
 
 //Dependencies for the target
+<<<<<<< HEAD
+pycaffe_LIB_DEPENDS:STATIC=general;caffe;general;/home/wangcheng/caffe/anaconda2/lib/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_python.so;
+=======
 pycaffe_LIB_DEPENDS:STATIC=general;-Wl,--whole-archive;general;caffe;general;-Wl,--no-whole-archive;general;/home/wangcheng/anaconda2/lib/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_python.so;
+>>>>>>> baf5f39b3126fd0d5490df5eeb7f74693cae452d
 
 //Specify which Python version to use
 python_version:STRING=2
