@@ -116,6 +116,11 @@ examples/mnist/convert_mnist_data: /home/wangcheng/caffe/anaconda2/lib/libhdf5_h
 examples/mnist/convert_mnist_data: /usr/lib/x86_64-linux-gnu/liblmdb.so
 examples/mnist/convert_mnist_data: /usr/lib/x86_64-linux-gnu/libleveldb.so
 examples/mnist/convert_mnist_data: /usr/lib/x86_64-linux-gnu/libsnappy.so
+examples/mnist/convert_mnist_data: /usr/local/cuda/lib64/libcudart.so
+examples/mnist/convert_mnist_data: /usr/local/cuda/lib64/libcurand.so
+examples/mnist/convert_mnist_data: /usr/local/cuda/lib64/libcublas.so
+examples/mnist/convert_mnist_data: /usr/local/cuda/lib64/libcublas_device.a
+examples/mnist/convert_mnist_data: /home/wangcheng/cuda/lib64/libcudnn.so
 examples/mnist/convert_mnist_data: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.9
 examples/mnist/convert_mnist_data: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.9
 examples/mnist/convert_mnist_data: /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.9

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS =  -fPIC -Wall -Wno-sign-compare -Wno-uninitialized -O3 -DNDEBUG -fPIC  
 
-CXX_DEFINES = -DCAFFE_VERSION=1.0.0-rc3 -DCPU_ONLY -DGTEST_USE_OWN_TR1_TUPLE -DUSE_LEVELDB -DUSE_LMDB -DUSE_OPENCV -DWITH_PYTHON_LAYER -Dpycaffe_EXPORTS
+CXX_DEFINES = -DCAFFE_VERSION=1.0.0-rc3 -DGTEST_USE_OWN_TR1_TUPLE -DUSE_CUDNN -DUSE_LEVELDB -DUSE_LMDB -DUSE_OPENCV -DWITH_PYTHON_LAYER -Dpycaffe_EXPORTS
 
-CXX_INCLUDES = -I/home/wangcheng/Komi/caffe/src -isystem /home/wangcheng/Komi/caffe/build/include -isystem /home/wangcheng/caffe/anaconda2/include -isystem /usr/include/opencv -isystem /home/wangcheng/caffe/anaconda2/include/python2.7 -isystem /home/wangcheng/caffe/anaconda2/lib/python2.7/site-packages/numpy/core/include -I/home/wangcheng/Komi/caffe/include -I/home/wangcheng/Komi/caffe/build 
+CXX_INCLUDES = -I/home/wangcheng/Komi/caffe/src -isystem /home/wangcheng/Komi/caffe/build/include -isystem /home/wangcheng/caffe/anaconda2/include -isystem /usr/local/cuda/include -isystem /home/wangcheng/cuda/include -isystem /usr/include/opencv -isystem /home/wangcheng/caffe/anaconda2/include/python2.7 -isystem /home/wangcheng/caffe/anaconda2/lib/python2.7/site-packages/numpy/core/include -I/home/wangcheng/Komi/caffe/include -I/home/wangcheng/Komi/caffe/build 
 

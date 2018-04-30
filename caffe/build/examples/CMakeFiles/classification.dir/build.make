@@ -116,6 +116,11 @@ examples/cpp_classification/classification: /home/wangcheng/caffe/anaconda2/lib/
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/liblmdb.so
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libleveldb.so
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libsnappy.so
+examples/cpp_classification/classification: /usr/local/cuda/lib64/libcudart.so
+examples/cpp_classification/classification: /usr/local/cuda/lib64/libcurand.so
+examples/cpp_classification/classification: /usr/local/cuda/lib64/libcublas.so
+examples/cpp_classification/classification: /usr/local/cuda/lib64/libcublas_device.a
+examples/cpp_classification/classification: /home/wangcheng/cuda/lib64/libcudnn.so
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.9
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.9
 examples/cpp_classification/classification: /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.9

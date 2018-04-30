@@ -118,6 +118,11 @@ lib/_caffe.so: /home/wangcheng/caffe/anaconda2/lib/libhdf5_hl.so
 lib/_caffe.so: /usr/lib/x86_64-linux-gnu/liblmdb.so
 lib/_caffe.so: /usr/lib/x86_64-linux-gnu/libleveldb.so
 lib/_caffe.so: /usr/lib/x86_64-linux-gnu/libsnappy.so
+lib/_caffe.so: /usr/local/cuda/lib64/libcudart.so
+lib/_caffe.so: /usr/local/cuda/lib64/libcurand.so
+lib/_caffe.so: /usr/local/cuda/lib64/libcublas.so
+lib/_caffe.so: /usr/local/cuda/lib64/libcublas_device.a
+lib/_caffe.so: /home/wangcheng/cuda/lib64/libcudnn.so
 lib/_caffe.so: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.9
 lib/_caffe.so: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.9
 lib/_caffe.so: /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.9

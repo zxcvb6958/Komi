@@ -11,8 +11,8 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
   "CAFFE_VERSION=1.0.0-rc3"
-  "CPU_ONLY"
   "GTEST_USE_OWN_TR1_TUPLE"
+  "USE_CUDNN"
   "USE_LEVELDB"
   "USE_LMDB"
   "USE_OPENCV"
@@ -24,6 +24,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../src"
   "include"
   "/home/wangcheng/caffe/anaconda2/include"
+  "/usr/local/cuda/include"
+  "/home/wangcheng/cuda/include"
   "/usr/include/opencv"
   "/home/wangcheng/caffe/anaconda2/include/python2.7"
   "/home/wangcheng/caffe/anaconda2/lib/python2.7/site-packages/numpy/core/include"

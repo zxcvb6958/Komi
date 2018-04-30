@@ -31,7 +31,7 @@ def initilize():
     deployPrototxt = "models/VGG_FACE_deploy.prototxt"
     modelFile = "data/pretrained_model/VGG_FACE.caffemodel"
     caffe.set_mode_gpu()
-    caffe.set_device(2)
+    caffe.set_device(1)
     net = caffe.Net(deployPrototxt, modelFile, caffe.TEST)
 
     return net
@@ -123,9 +123,18 @@ if __name__ == '__main__':
     feature = extractFeature(face_data)
 
     test_num = len(labels)
-    import ipdb; ipdb.set_trace()
-    mt = pw.pairwise_distances(featureleft, featureright, metric='cosine')
-    distance = np.empty((test_num,))
+    for i in range(test_num):
+        now_data = feature[i]
+        now_label = labels[i]
+
+        for j in range(test_num):
+            test_data = feature[j]
+            test_label = labels[j]
+            import ipdb; ipdb.set_trace()
+            dis = pw.pairwise_distances(now_data, test_data, metric='cosine')
+
+    mt = pw.pairwise_distances(feature, metric='cosine')
+    distance = np.empty((test_num, ))
     for i in range(test_num):
         distance[i] = mt[i][i]
 
@@ -133,7 +142,6 @@ if __name__ == '__main__':
 
     for i in range(test_num):
         distance_norm[i] = (distance[i]-np.min(distance))/(np.max(distance)-np.min(distance))
-    
 
     highestAccuracy, threshold = calculate_accuracy(distance_norm,labels,len(labels))
     print ("the highest accuracy is : %.4f, and the corresponding threshold is %s \n"%(highestAccuracy, threshold))

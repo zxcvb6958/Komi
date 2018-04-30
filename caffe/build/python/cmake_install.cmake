@@ -58,15 +58,15 @@ if("${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMP
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/python/caffe/_caffe.so")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/python/caffe/_caffe.so"
-         RPATH "/home/wangcheng/Komi/caffe/build/install/lib:/home/wangcheng/caffe/anaconda2/lib")
+         RPATH "/home/wangcheng/Komi/caffe/build/install/lib:/home/wangcheng/caffe/anaconda2/lib:/usr/local/cuda/lib64:/home/wangcheng/cuda/lib64")
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/python/caffe" TYPE SHARED_LIBRARY FILES "/home/wangcheng/Komi/caffe/build/lib/_caffe.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/python/caffe/_caffe.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/python/caffe/_caffe.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/python/caffe/_caffe.so"
-         OLD_RPATH "/home/wangcheng/Komi/caffe/build/lib:/home/wangcheng/caffe/anaconda2/lib::::::::"
-         NEW_RPATH "/home/wangcheng/Komi/caffe/build/install/lib:/home/wangcheng/caffe/anaconda2/lib")
+         OLD_RPATH "/home/wangcheng/Komi/caffe/build/lib:/home/wangcheng/caffe/anaconda2/lib:/usr/local/cuda/lib64:/home/wangcheng/cuda/lib64::::::::"
+         NEW_RPATH "/home/wangcheng/Komi/caffe/build/install/lib:/home/wangcheng/caffe/anaconda2/lib:/usr/local/cuda/lib64:/home/wangcheng/cuda/lib64")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/python/caffe/_caffe.so")
     endif()
