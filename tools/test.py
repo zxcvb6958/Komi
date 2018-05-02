@@ -30,12 +30,7 @@ def initilize():
     print 'initilizing...'
     deployPrototxt = "models/VGG_FACE_deploy.prototxt"
     modelFile = "data/pretrained_model/VGG_FACE.caffemodel"
-<<<<<<< HEAD
-    caffe.set_mode_gpu()
-    caffe.set_device(0)
-=======
     caffe.set_mode_cpu()
->>>>>>> baf5f39b3126fd0d5490df5eeb7f74693cae452d
     net = caffe.Net(deployPrototxt, modelFile, caffe.TEST)
 
     return net
