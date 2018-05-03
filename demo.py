@@ -31,7 +31,8 @@ def unpickle(file_path):
 def initilize():
     print 'initilizing...'
     deployPrototxt = "models/VGG_FACE_deploy.prototxt"
-    modelFile = "data/pretrained_model/VGG_FACE.caffemodel"
+    # modelFile = "data/pretrained_model/VGG_FACE.caffemodel"
+    modelFile = "outputs/face_iter_30000.caffemodel"
     caffe.set_mode_gpu()
     caffe.set_device(1)
     net = caffe.Net(deployPrototxt, modelFile, caffe.TEST)
@@ -52,7 +53,7 @@ def read_imagelist(labelfile):
 
 
     for line in lines:
-        path = line.strip('\n').split('\t')
+        path = line.strip('\n').split(' ')
         #read left image
         filename = path[0]
         img = skimage.io.imread(filename, as_grey=False)
@@ -121,12 +122,16 @@ def evaluate_search(db, feature, dump_json=None):
         mt[i][i] = 1
     
     count = 0
+    vaild_count = 0
     last_label = 0
+    rank1_acc = 0
+    rank5_acc = 0
     timer = Timer()
     timer.tic()
 
     for i in range(test_num):
         if db[i]['label'] != last_label and i+1 < test_num and db[i]['label'] == db[i+1]['label']:
+            vaild_count += 1
             last_label = db[i]['label']
             w = db[i]['w']
             h = db[i]['h']
@@ -149,10 +154,19 @@ def evaluate_search(db, feature, dump_json=None):
                         'probe_roi': [10, 10, w-10, h-10],
                         'probe_gt': probe_gt,
                         'gallery': []}
+            
+            rank5_label = False
 
             for j in range(20):
                 min_index = mt[i].index(min(mt[i]))
                 mt[i][min_index] = 1
+
+                if j == 0 and db[min_index]['label'] == db[i]['label']:
+                    rank1_acc += 1
+
+                if j < 5 and not rank5_label and db[min_index]['label'] == db[i]['label']:
+                    rank5_acc += 1
+                    rank5_label = True
 
                 rank_target = db[min_index]
 
@@ -173,6 +187,13 @@ def evaluate_search(db, feature, dump_json=None):
 
 
     timer.toc()
+
+    rank1 = (rank1_acc - 0.0) / vaild_count
+    print 'rank-1 acc: {0}'.format(rank1)
+
+    rank5 = (rank5_acc - 0.0) / vaild_count
+    print 'rank-5 acc: {0}'.format(rank5)
+
     if dump_json is not None:
             if not osp.isdir(osp.dirname(dump_json)):
                 os.makedirs(osp.dirname(dump_json))
@@ -185,4 +206,7 @@ if __name__ == '__main__':
 
     net = initilize()
     feature = extractFeature(face_data, net)
+    del face_data
+    del net
+
     evaluate_search(db, feature, osp.join('vis', 'results.json'))
