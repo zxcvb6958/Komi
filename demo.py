@@ -32,7 +32,7 @@ def initilize():
     print 'initilizing...'
     deployPrototxt = "models/VGG_FACE_deploy.prototxt"
     # modelFile = "data/pretrained_model/VGG_FACE.caffemodel"
-    modelFile = "outputs/face_iter_30000.caffemodel"
+    modelFile = "outputs/face_iter_50000.caffemodel"
     caffe.set_mode_gpu()
     caffe.set_device(1)
     net = caffe.Net(deployPrototxt, modelFile, caffe.TEST)
