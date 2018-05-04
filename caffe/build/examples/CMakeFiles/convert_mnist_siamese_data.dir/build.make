@@ -116,6 +116,11 @@ examples/siamese/convert_mnist_siamese_data: /home/wangcheng/caffe/anaconda2/lib
 examples/siamese/convert_mnist_siamese_data: /usr/lib/x86_64-linux-gnu/liblmdb.so
 examples/siamese/convert_mnist_siamese_data: /usr/lib/x86_64-linux-gnu/libleveldb.so
 examples/siamese/convert_mnist_siamese_data: /usr/lib/x86_64-linux-gnu/libsnappy.so
+examples/siamese/convert_mnist_siamese_data: /usr/local/cuda/lib64/libcudart.so
+examples/siamese/convert_mnist_siamese_data: /usr/local/cuda/lib64/libcurand.so
+examples/siamese/convert_mnist_siamese_data: /usr/local/cuda/lib64/libcublas.so
+examples/siamese/convert_mnist_siamese_data: /usr/local/cuda/lib64/libcublas_device.a
+examples/siamese/convert_mnist_siamese_data: /home/wangcheng/cuda/lib64/libcudnn.so
 examples/siamese/convert_mnist_siamese_data: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.9
 examples/siamese/convert_mnist_siamese_data: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.9
 examples/siamese/convert_mnist_siamese_data: /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.9

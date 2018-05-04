@@ -5,7 +5,7 @@ rm -r build
 mkdir build
 cd build
 
-cmake .. -DBLAS=open -DCPU_ONLY=ON
+cmake .. -DBLAS=open -DCUDNN_INCLUDE=/home/wangcheng/cuda/include -DCUDNN_LIBRARY=/home/wangcheng/cuda/lib64/libcudnn.so
 
 make -j8
 cd ../..
