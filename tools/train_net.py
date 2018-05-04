@@ -41,8 +41,9 @@ if __name__ == '__main__':
     print(args)
 
     # set up caffe
-    caffe.set_mode_gpu()
-    caffe.set_device(args.gpu_id)
+    # caffe.set_mode_gpu()
+    # caffe.set_device(args.gpu_id)
+    caffe.set_mode_cpu()
 
     output_dir = os.path.join(".", "outputs")
 
